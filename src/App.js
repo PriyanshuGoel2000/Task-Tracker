@@ -19,20 +19,20 @@ const  App=()=> {
 
   //fetch Tasks 
   const fetchTasks=async() =>{
-    const res = await fetch('https://my-json-server.typicode.com/PriyanshuGoel2000/Task-Tracker/tasks')
+    const res = await fetch('https://github.com/PriyanshuGoel2000/Task-Tracker/blob/[main|master]/tasks')
     const data =await res.json()
     return data 
   }
 
    //fetch Task
    const fetchTask=async(id) =>{
-    const res = await fetch(`https://my-json-server.typicode.com/PriyanshuGoel2000/Task-Tracker/tasks/${id}`)
+    const res = await fetch(`https://github.com/PriyanshuGoel2000/Task-Tracker/blob/[main|master]/tasks/${id}`)
     const data =await res.json()
     return data 
   } 
 //Add Task
 const addTask= async (task) => {
-  const res= await fetch('https://my-json-server.typicode.com/PriyanshuGoel2000/Task-Tracker/tasks',{
+  const res= await fetch('https://github.com/PriyanshuGoel2000/Task-Tracker/blob/[main|master]/tasks',{
     method:'POST',
     headers:{
       'Content-type': 'application/json'
@@ -49,7 +49,7 @@ const addTask= async (task) => {
 
 //Delete Task
 const deleteTask =async (id)=>{
-  await fetch(`https://my-json-server.typicode.com/PriyanshuGoel2000/Task-Tracker/tasks/${id}`,{
+  await fetch(`https://github.com/PriyanshuGoel2000/Task-Tracker/blob/[main|master]/tasks/${id}`,{
     method:'DELETE'
   })
   setTasks(tasks.filter((task)=> task.id!==id))
@@ -60,7 +60,7 @@ const toggleReminder=async(id)=>{
   const taskToToggle= await fetchTask(id)
   const updTask={...taskToToggle, 
     reminder: !taskToToggle.reminder}
-  const res = await fetch(`https://my-json-server.typicode.com/PriyanshuGoel2000/Task-Tracker/tasks/${id}`,{
+  const res = await fetch(`https://github.com/PriyanshuGoel2000/Task-Tracker/blob/[main|master]/tasks/${id}`,{
     method:'PUT',
     headers:{
       'Content-type': 'application/json'

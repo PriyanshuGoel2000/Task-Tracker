@@ -1,6 +1,7 @@
 {
-  "homepage": "http://PriyanshuGoel2000/Task-Tracker",
+  
   "name": "react-task-tracker",
+  "homepage": "http://PriyanshuGoel2000/Task-Tracker",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
